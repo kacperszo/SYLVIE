@@ -9,7 +9,11 @@ packages = [{include = "sylvie"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 langchain = "^0.1.12"
+uvicorn = "^0.29.0"
+fastapi = "^0.110.0"
 
+[tool.poetry.scripts]
+start = 'backend.main:start'
 
 [build-system]
 requires = ["poetry-core"]

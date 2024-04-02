@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "SYLVIE, your new virtual companion! SYLVIE (Synthetic Virtual Intelligence Entity) is here to assist you in various tasks and provide companionship whenever you need it. Whether you're looking for information, seeking assistance, or simply want someone to chat with, SYLVIE is always here to help."
 authors = ["Kacper Szot <kacperszot1@gmail.com>"]
 readme = "README.md"
-packages = [{include = "sylvie"}]
+packages = [{ include = "backend" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -12,9 +12,21 @@ langchain = "^0.1.12"
 uvicorn = "^0.29.0"
 fastapi = "^0.110.0"
 websockets = "^12.0"
+transformers = "^4.39.2"
+torch = { version = "^2.2.2+cu121", source = "pytorch" }
+torchvision = { version = "^0.17.2+cu121", source = "pytorch" }
+torchaudio = { version = "^2.2.2+cu121", source = "pytorch" }
+scipy = "^1.12.0"
+datasets = { extras = ["audio"], version = "^2.18.0" }
+sentencepiece = "^0.2.0"
 
 [tool.poetry.scripts]
 start = 'backend.main:start'
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
 
 [build-system]
 requires = ["poetry-core"]

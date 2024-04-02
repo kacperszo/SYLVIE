@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=Inter:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --bg-color: #070f2b;
+  --bg-color2: #1b1a55;
+  --bg-color3: #535c91;
+  --primary-color: #9290c3;
+}
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: 12px;
+  scrollbar-color: var(--primary-color) #ffffff00;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+  
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+  
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: 3px solid #ffffff00;
+}

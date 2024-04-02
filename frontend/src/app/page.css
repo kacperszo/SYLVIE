@@ -1,0 +1,29 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav h1 {
+  line-height: 1rem;
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.nav h2 {
+  margin-top: 0;
+  font-size: 1rem;
+  display: block;
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.blob {
+  animation: rotating 75s linear infinite;
+}
